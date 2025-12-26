@@ -1,0 +1,79 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Plan extends Model
+{
+    // Plan frequency constants
+    const MONTHLY = 1;
+    const YEARLY = 2;
+    const TRIAL_DAYS = 7;
+    
+    protected $fillable = [
+        'name',
+        'price',
+        'duration',
+        'description',
+        'business',
+        'max_users',
+        'themes',
+        'enable_custdomain',
+        'enable_custsubdomain',
+        'enable_branding',
+        'pwa_business',
+        'enable_qr_code',
+        'enable_chatgpt',
+        'enable_wallet',
+        'storage_limit',
+    ];
+
+    public static $arrDuration = [
+        'Lifetime' => 'Lifetime',
+        'Month' => 'Per Month',
+        'Year' => 'Per Year',
+    ];
+
+    public static function total_plan()
+    {
+        return Plan::count();
+    }
+
+    public static function most_purchese_plan()
+    {
+        $free_plan = Plan::where('price', '<=', 0)->first()->id;
+
+        return User:: select('plans.name', 'plans.id', \DB::raw('count(*) as total'))->join('plans', 'plans.id', '=', 'users.plan')->where('type', '=', 'owner')->where('plan', '!=', $free_plan)->orderBy('total', 'Desc')->groupBy('plans.name', 'plans.id')->first();
+    }
+    public function status()
+    {
+        return [
+            __('Lifetime'),
+            __('Per Month'),
+            __('Per Year'),
+        ];
+    }
+    public function transkeyword()
+    {
+        $arr = [
+            __('Per Month'),
+            __('Per Year'),
+            __('Year'),
+        ];
+    }
+    public function getThemes(){
+        if(!empty($this->themes)){
+            return explode(',',$this->themes);
+        }else{
+            return [];
+        }
+    }
+    public static function getThemescount(){
+        if(!empty($this->themes)){
+            return explode(',',$this->themes);
+        }else{
+            return [];
+        }
+    }
+}

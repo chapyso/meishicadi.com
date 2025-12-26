@@ -1,0 +1,26 @@
+[18-Oct-2025 20:38:34 UTC] PHP Warning:  require(/home/u916293666/domains/suplexgym.com/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/u916293666/domains/suplexgym.com/public_html/index.php on line 34
+[18-Oct-2025 20:38:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/u916293666/domains/suplexgym.com/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/u916293666/domains/suplexgym.com/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/suplexgym.com/public_html/index.php on line 34
+[18-Oct-2025 20:38:38 UTC] PHP Warning:  require(/home/u916293666/domains/suplexgym.com/public_html/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/u916293666/domains/suplexgym.com/public_html/index.php on line 34
+[18-Oct-2025 20:38:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/u916293666/domains/suplexgym.com/public_html/../vendor/autoload.php' (include_path='.:/opt/alt/php82/usr/share/pear:/opt/alt/php82/usr/share/php:/usr/share/pear:/usr/share/php') in /home/u916293666/domains/suplexgym.com/public_html/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/suplexgym.com/public_html/index.php on line 34
+[18-Oct-2025 21:10:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function asset() in /home/u916293666/domains/suplexgym.com/public_html/test_asset.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/suplexgym.com/public_html/test_asset.php on line 1
+[30-Nov-2025 19:10:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/suplexgym.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/suplexgym.com/public_html/config/database.php on line 18
+[30-Nov-2025 19:10:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/suplexgym.com/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/suplexgym.com/public_html/config/app.php on line 18
+[30-Nov-2025 19:10:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/suplexgym.com/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/suplexgym.com/public_html/config/mail.php on line 16

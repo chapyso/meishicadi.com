@@ -1,0 +1,60 @@
+[05-Jan-2025 20:27:02 UTC] PHP Fatal error:  Uncaught ArgumentCountError: 3 arguments are required, 2 given in /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php:208
+Stack trace:
+#0 /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php(208): sprintf()
+#1 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3643): Bulk_Upgrader_Skin->after()
+#2 /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-wp-upgrader.php(944): TGMPA_Bulk_Installer_Skin->after()
+#3 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3263): WP_Upgrader->run()
+#4 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3368): TGMPA_Bulk_Installer->run()
+#5 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(2982): TGMPA_Bulk_Installer->bulk_install()
+#6 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(748): TGMPA_List_Table->process_bulk_actions()
+#7 /home/u916293666/domains/wegohub.online/public_html/wp-includes/class-wp-hook.php(324): TGM_Plugin_Activation->install_plugins_page()
+#8 /home/u916293666/domains/wegohub.online/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#9 /home/u916293666/domains/wegohub.online/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#10 /home/u916293666/domains/wegohub.online/public_html/wp-admin/admin.php(259): do_action()
+#11 /home/u916293666/domains/wegohub.online/public_html/wp-admin/themes.php(10): require_once('/home/u91629366...')
+#12 {main}
+  thrown in /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php on line 208
+[05-Jan-2025 20:27:25 UTC] PHP Fatal error:  Uncaught ArgumentCountError: 3 arguments are required, 2 given in /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php:208
+Stack trace:
+#0 /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php(208): sprintf()
+#1 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3643): Bulk_Upgrader_Skin->after()
+#2 /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-wp-upgrader.php(944): TGMPA_Bulk_Installer_Skin->after()
+#3 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3263): WP_Upgrader->run()
+#4 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3368): TGMPA_Bulk_Installer->run()
+#5 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(2982): TGMPA_Bulk_Installer->bulk_install()
+#6 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(748): TGMPA_List_Table->process_bulk_actions()
+#7 /home/u916293666/domains/wegohub.online/public_html/wp-includes/class-wp-hook.php(324): TGM_Plugin_Activation->install_plugins_page()
+#8 /home/u916293666/domains/wegohub.online/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#9 /home/u916293666/domains/wegohub.online/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#10 /home/u916293666/domains/wegohub.online/public_html/wp-admin/admin.php(259): do_action()
+#11 /home/u916293666/domains/wegohub.online/public_html/wp-admin/themes.php(10): require_once('/home/u91629366...')
+#12 {main}
+  thrown in /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php on line 208
+[05-Jan-2025 20:29:16 UTC] PHP Fatal error:  Uncaught ArgumentCountError: 3 arguments are required, 2 given in /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php:208
+Stack trace:
+#0 /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php(208): sprintf()
+#1 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3643): Bulk_Upgrader_Skin->after()
+#2 /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-wp-upgrader.php(944): TGMPA_Bulk_Installer_Skin->after()
+#3 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3263): WP_Upgrader->run()
+#4 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(3368): TGMPA_Bulk_Installer->run()
+#5 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(2982): TGMPA_Bulk_Installer->bulk_install()
+#6 /home/u916293666/domains/wegohub.online/public_html/wp-content/themes/superio/inc/plugins/class-tgm-plugin-activation.php(748): TGMPA_List_Table->process_bulk_actions()
+#7 /home/u916293666/domains/wegohub.online/public_html/wp-includes/class-wp-hook.php(324): TGM_Plugin_Activation->install_plugins_page()
+#8 /home/u916293666/domains/wegohub.online/public_html/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#9 /home/u916293666/domains/wegohub.online/public_html/wp-includes/plugin.php(517): WP_Hook->do_action()
+#10 /home/u916293666/domains/wegohub.online/public_html/wp-admin/admin.php(259): do_action()
+#11 /home/u916293666/domains/wegohub.online/public_html/wp-admin/themes.php(10): require_once('/home/u91629366...')
+#12 {main}
+  thrown in /home/u916293666/domains/wegohub.online/public_html/wp-admin/includes/class-bulk-upgrader-skin.php on line 208
+[30-Jan-2025 05:13:54 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[30-Jan-2025 05:13:54 UTC] Cron unschedule event error for hook: woocommerce_cancel_unpaid_orders, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":false,"args":[]}
+[15-Mar-2025 14:11:30 UTC] Cron reschedule event error for hook: litespeed_task_lqip, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[15-Mar-2025 14:11:30 UTC] Cron unschedule event error for hook: litespeed_task_lqip, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[15-Mar-2025 14:11:30 UTC] Cron reschedule event error for hook: litespeed_task_imgoptm_pull, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[15-Mar-2025 14:11:30 UTC] Cron unschedule event error for hook: litespeed_task_imgoptm_pull, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[26-Apr-2025 04:10:36 UTC] Cron reschedule event error for hook: action_scheduler_run_queue, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"every_minute","args":["WP Cron"],"interval":60}
+[05-Jun-2025 23:39:31 UTC] Cron reschedule event error for hook: litespeed_task_lqip, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[18-Jul-2025 07:26:29 UTC] Cron reschedule event error for hook: mc4wp_refresh_mailchimp_lists, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"daily","args":[],"interval":86400}
+[12-Aug-2025 03:32:21 UTC] Cron reschedule event error for hook: wp_privacy_delete_old_export_files, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"hourly","args":[],"interval":3600}
+[12-Aug-2025 05:45:22 UTC] Cron reschedule event error for hook: litespeed_task_imgoptm_pull, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"litespeed_filter","args":[],"interval":60}
+[12-Aug-2025 11:17:03 UTC] Cron reschedule event error for hook: litespeed_task_imgoptm_pull, Error code: could_not_set, Error message: The cron event list could not be saved., Data: {"schedule":"litespeed_filter","args":[],"interval":60}

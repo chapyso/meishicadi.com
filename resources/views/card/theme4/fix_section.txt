@@ -1,0 +1,20 @@
+                                                                @if ($social_key1 == 'Whatsapp')
+                                                                    @if ((new \Jenssegers\Agent\Agent())->isDesktop())
+                                                                        @php
+                                                                            $social_links = url('https://web.whatsapp.com/send?phone=' . $social_val1);
+                                                                        @endphp
+                                                                    @else
+                                                                        @php
+                                                                            $social_links = url('https://wa.me/' . $social_val1);
+                                                                        @endphp
+                                                                    @endif
+                                                                @else
+                                                                    @php
+                                                                        $social_links = url($social_val1);
+                                                                    @endphp
+                                                                @endif
+                                                                <a href="{{ $social_links }}" target="_blank"
+                                                                    id="{{ 'social_link_' . $social_no . '_href_preview' }}">
+                                                                    <img src="{{ asset('custom/theme4/icon/social/' . strtolower($social_key1) . '.svg') }}"
+                                                                        alt="social" class="img-fluid">
+                                                                </a>

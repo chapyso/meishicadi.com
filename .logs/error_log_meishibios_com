@@ -1,0 +1,132 @@
+[09-Apr-2025 03:48:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[12-Apr-2025 17:39:35 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/services.php on line 18
+[12-Apr-2025 17:39:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/app.php on line 18
+[12-Apr-2025 17:39:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[18-Apr-2025 17:50:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/cache.php on line 18
+[02-Jun-2025 09:55:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/cache.php on line 18
+[16-Jun-2025 02:31:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[16-Jun-2025 02:31:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/app.php on line 18
+[16-Jun-2025 02:31:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/cache.php on line 18
+[22-Jun-2025 04:13:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[22-Jun-2025 04:14:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/app.php on line 18
+[22-Jun-2025 04:14:22 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/cache.php on line 18
+[30-Jun-2025 13:41:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[30-Jun-2025 13:41:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/app.php on line 18
+[30-Jun-2025 13:41:39 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/cache.php on line 18
+[03-Aug-2025 02:05:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[07-Aug-2025 17:07:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[07-Aug-2025 17:09:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/app.php on line 18
+[07-Aug-2025 17:09:23 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/cache.php on line 18
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/services.php on line 18
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/filesystems.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/filesystems.php on line 16
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/broadcasting.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/broadcasting.php on line 18
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/app.php on line 18
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/queue.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/queue.php on line 16
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/cache.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/cache.php on line 18
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function resource_path() in /home/u916293666/domains/meishibios.com/public_html/config/view.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/view.php on line 17
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/session.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/session.php on line 21
+[30-Oct-2025 00:30:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/mail.php on line 16
+[16-Dec-2025 15:17:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/database.php on line 18
+[16-Dec-2025 15:17:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/mail.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/mail.php on line 16
+[16-Dec-2025 15:17:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/app.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/app.php on line 18
+[16-Dec-2025 15:17:03 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/u916293666/domains/meishibios.com/public_html/config/services.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/u916293666/domains/meishibios.com/public_html/config/services.php on line 18

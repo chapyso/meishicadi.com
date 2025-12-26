@@ -1,0 +1,15 @@
+[15-Oct-2025 23:50:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function base_url() in /home/u916293666/domains/chapypos.online/public_html/application/views/errors/html/error_exception.php:4
+Stack trace:
+#0 /home/u916293666/domains/chapypos.online/public_html/system/core/Exceptions.php(219): include()
+#1 /home/u916293666/domains/chapypos.online/public_html/system/core/Common.php(680): CI_Exceptions->show_exception()
+#2 [internal function]: _exception_handler()
+#3 {main}
+  thrown in /home/u916293666/domains/chapypos.online/public_html/application/views/errors/html/error_exception.php on line 4
+[15-Oct-2025 23:50:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function base_url() in /home/u916293666/domains/chapypos.online/public_html/application/views/errors/html/error_php.php:4
+Stack trace:
+#0 /home/u916293666/domains/chapypos.online/public_html/system/core/Exceptions.php(268): include()
+#1 /home/u916293666/domains/chapypos.online/public_html/system/core/Common.php(644): CI_Exceptions->show_php_error()
+#2 /home/u916293666/domains/chapypos.online/public_html/system/core/Common.php(710): _error_handler()
+#3 [internal function]: _shutdown_handler()
+#4 {main}
+  thrown in /home/u916293666/domains/chapypos.online/public_html/application/views/errors/html/error_php.php on line 4
