@@ -1456,19 +1456,18 @@ class BusinessController extends Controller
 
     public function getcard($slug)
     {
-        if (!\Auth::check()) {
-            $visit = visitor()->visit($slug);
-            $visit_data = \DB::table('visitor')->where('slug', $visit->slug)->get();
-            foreach ($visit_data as $key => $value) {
-                $busi_data = Business::where('slug', $value->slug)->first();
-                if (!is_null($busi_data)) {
-                    $v_data = \DB::table('visitor')->where('id', $value->id)->update(['created_by' => $busi_data->created_by]);
-                }
-            }
+        $business = Business::where('slug', $slug)->first();
+
+        if (is_null($business)) {
+            abort(500);
         }
 
-        $business = Business::where('slug', $slug)->first();
-            $theme=json_decode($business->card_theme);
+        if (!\Auth::check()) {
+            $visit = visitor()->visit($business);
+            \DB::table('visitor')->where('id', $visit->id)->update(['created_by' => $business->created_by]);
+        }
+
+        $theme = json_decode($business->card_theme);
           if($business->map_iframe=='Bahrain Airport Services HQ, Muharraq, Bahrain'){
              $specificCompanyAndTheme=[
                 'map_iframe' =>true,

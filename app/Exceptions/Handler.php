@@ -49,7 +49,12 @@ class Handler extends ExceptionHandler
             //
         });
 
+        $this->renderable(function (\Symfony\Component\HttpKernel\Exception\NotFoundHttpException $e, $request) {
+            return response()->view('errors.500', [], 500);
+        });
+
         $this->renderable(function (AuthenticationException $e, $request) {
+
             if ($request->is('api/*')) {
                 return $this->error(['message' => 'Invalid token.'], 'fail', 401, 9);
             }
