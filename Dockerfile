@@ -11,7 +11,8 @@ RUN apk add --no-cache \
     libzip-dev \
     icu-dev \
     oniguruma-dev \
-    libxml2-dev
+    libxml2-dev \
+    curl
 
 # Install PHP extensions
 RUN docker-php-ext-install \
@@ -24,6 +25,9 @@ RUN docker-php-ext-install \
     gd \
     intl
 
+# Install Composer
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
 # Set working directory
 WORKDIR /var/www/html
 
@@ -32,14 +36,17 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Create necessary directories
-RUN mkdir -p /var/log/supervisor /var/run /var/lib/nginx/logs
+RUN mkdir -p /var/log/supervisor /var/run /var/lib/nginx/logs /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Copy application source
 COPY . /var/www/html
 
+# Install dependencies
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
 # Fix file permissions for www-data
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html/storage \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache \
     && chown -R www-data:www-data /var/lib/nginx \
     && chown -R www-data:www-data /var/log/nginx
 
