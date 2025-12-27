@@ -1459,12 +1459,20 @@ class BusinessController extends Controller
         $business = Business::where('slug', $slug)->first();
 
         if (is_null($business)) {
-            abort(500);
+            abort(404);
         }
 
         if (!\Auth::check()) {
             $visit = visitor()->visit($business);
             \DB::table('visitor')->where('id', $visit->id)->update(['created_by' => $business->created_by]);
+        }
+
+        if (empty($business->card_theme)) {
+            $card_order = [];
+            $card_order['theme'] = 'theme1';
+            $card_order['order'] = Utility::getDefaultThemeOrder('theme1');
+            $business->card_theme = json_encode($card_order);
+            $business->save();
         }
 
         $theme = json_decode($business->card_theme);
