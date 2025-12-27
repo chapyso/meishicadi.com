@@ -1598,7 +1598,7 @@ class BusinessController extends Controller
                 $ds_lang_btns = "true";
             
              
-                return view('card.' . $finalTheme . '.index', compact('businessfields', 'contactinfo', 'contactinfo_content', 'appoinment_hours', 'appoinment', 'services_content', 'services', 'testimonials_content', 'testimonials', 'social_content', 'sociallinks', 'customhtml', 'businesshours', 'business_hours', 'business', 'days', 'is_slug', 'plan', 'gallery', 'gallery_contents', 'pixelScript', 'qr_detail','products','products_content','ds_lang_btns', 'specificCompanyAndTheme'))->render();
+                return view('card.' . $finalTheme . '.index', compact('businessfields', 'contactinfo', 'contactinfo_content', 'appoinment_hours', 'appoinment', 'services_content', 'services', 'testimonials_content', 'testimonials', 'social_content', 'sociallinks', 'customhtml', 'businesshours', 'business_hours', 'business', 'days', 'is_slug', 'plan', 'gallery', 'gallery_contents', 'pixelScript', 'qr_detail','products','products_content','ds_lang_btns', 'specificCompanyAndTheme'));
             }
             else{
                 return abort('403', 'The Link You Followed Has Disactive');

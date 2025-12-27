@@ -21,7 +21,7 @@
     $branding = $business->branding_text;
     $is_gdpr_enabled = false;
     $gdpr_text = $business->gdpr_text;
-    $card_theme = json_decode($business->card_theme);
+    $card_theme = json_decode($business->card_theme); if (!$card_theme) { $card_theme = new \stdClass(); } if (!isset($card_theme->order)) { $card_theme->order = []; }
     $banner = \App\Models\Utility::get_file('card_banner');
     $logo = \App\Models\Utility::get_file('card_logo');
     $image = \App\Models\Utility::get_file('testimonials_images');
@@ -243,7 +243,7 @@
 </style>
 <body class="tech-card-body">
     <div id="boxes">
-        <div class="{{ \App\Models\Utility::themeOne()['theme20'][$business->theme_color]['theme_name'] }}"
+        <div class="{{ \App\Models\Utility::themeOne()['theme20'][$business->theme_color]['theme_name'] ?? '' }}"
             id=view_theme9>
             <div class="home-wrapper">
                 <section class="client-info-section padding-top">

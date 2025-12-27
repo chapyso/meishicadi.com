@@ -51,18 +51,8 @@ class Handler extends ExceptionHandler
 
 
 
-        $this->renderable(function (AuthenticationException $e, $request) {
-
-            if ($request->is('api/*')) {
-                return $this->error(['message' => 'Invalid token.'], 'fail', 401, 9);
-            }
-        });
-
        
     }
 
-    public function render($request, Throwable $e)
-    {
-        die("SUPER DEBUG HANDLER: " . $e->getMessage() . " | File: " . $e->getFile() . " | Line: " . $e->getLine() . "<br><pre>" . $e->getTraceAsString() . "</pre>");
-    }    
+    
 }
