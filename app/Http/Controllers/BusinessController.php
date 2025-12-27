@@ -1553,7 +1553,11 @@ class BusinessController extends Controller
                 
         
                 $user = User::find($business->created_by);
-                $plan = Plan::find($user->plan);
+                if (!$user) {
+                    $plan = Plan::first();
+                } else {
+                    $plan = Plan::find($user->plan);
+                }
                 $days = business_hours::$days;
                 $business_hours = '';
                 if (!empty($businesshours->content)) {
