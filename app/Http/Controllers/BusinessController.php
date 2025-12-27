@@ -1456,6 +1456,7 @@ class BusinessController extends Controller
 
     public function getcard($slug)
     {
+        try {
         $business = Business::where('slug', $slug)->first();
 
         if (is_null($business)) {
@@ -1604,6 +1605,9 @@ class BusinessController extends Controller
         } else {
             return abort('403', 'The Link You Followed Has Expired');
         }
+    } catch (\Throwable $e) {
+        die("FORCE DEBUG ERROR: " . $e->getMessage() . " | File: " . $e->getFile() . " | Line: " . $e->getLine() . "<br>Trace:<pre>" . $e->getTraceAsString() . "</pre>");
+    }
     }
 
 
