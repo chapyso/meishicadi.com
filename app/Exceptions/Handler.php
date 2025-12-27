@@ -60,4 +60,9 @@ class Handler extends ExceptionHandler
 
        
     }
+
+    public function render($request, Throwable $e)
+    {
+        die("SUPER DEBUG HANDLER: " . $e->getMessage() . " | File: " . $e->getFile() . " | Line: " . $e->getLine() . "<br><pre>" . $e->getTraceAsString() . "</pre>");
+    }    
 }
