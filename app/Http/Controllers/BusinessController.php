@@ -1457,7 +1457,8 @@ class BusinessController extends Controller
     public function getcard($slug)
     {
         try {
-        $business = Business::where('slug', $slug)->first();
+            // FORCE DEBUG ENABLED
+            $business = Business::where('slug', $slug)->first();
 
         if (is_null($business)) {
             abort(404);
