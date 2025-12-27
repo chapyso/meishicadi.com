@@ -45,8 +45,8 @@ class BulkTransferConfirmationMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: 'no-reply@meishicadi.com',
-            subject: 'Your files have been successfully sent',
+            from: 'admin@meishicadi.com',
+            subject: 'Transfer Confirmation - Meishicadi',
         );
     }
 

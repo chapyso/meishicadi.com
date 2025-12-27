@@ -48,7 +48,8 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache \
     && chown -R www-data:www-data /var/lib/nginx \
-    && chown -R www-data:www-data /var/log/nginx
+    && chown -R www-data:www-data /var/log/nginx \
+    && php artisan storage:link
 
 # Expose port 80
 EXPOSE 80
