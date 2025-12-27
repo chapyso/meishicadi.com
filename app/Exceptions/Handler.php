@@ -49,9 +49,7 @@ class Handler extends ExceptionHandler
             //
         });
 
-        $this->renderable(function (\Symfony\Component\HttpKernel\Exception\NotFoundHttpException $e, $request) {
-            return response()->view('errors.500', [], 500);
-        });
+
 
         $this->renderable(function (AuthenticationException $e, $request) {
 
