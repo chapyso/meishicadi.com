@@ -1476,15 +1476,22 @@ class BusinessController extends Controller
         }
 
         $theme = json_decode($business->card_theme);
+        
+        // Fallback if theme is invalid or missing 'theme' property
+        $themeName = 'theme1';
+        if ($theme && isset($theme->theme)) {
+            $themeName = $theme->theme;
+        }
+
           if($business->map_iframe=='Bahrain Airport Services HQ, Muharraq, Bahrain'){
              $specificCompanyAndTheme=[
                 'map_iframe' =>true,
-                'theme'=>$theme->theme,
+                'theme'=>$themeName,
                 ];   
           }else{
             $specificCompanyAndTheme=[
                 'map_iframe' =>false,
-                'theme'=>$theme->theme,
+                'theme'=>$themeName,
                 ];
           }
           
@@ -1560,6 +1567,12 @@ class BusinessController extends Controller
                     $business->save();
                 }
                 $card_theme = json_decode($business->card_theme);
+                
+                $finalTheme = 'theme1';
+                if ($card_theme && isset($card_theme->theme)) {
+                    $finalTheme = $card_theme->theme;
+                }
+
                 $pixels = PixelFields::where('business_id', $business->id)->get();
                 $pixelScript = [];
                 foreach ($pixels as $pixel) {
@@ -1579,7 +1592,7 @@ class BusinessController extends Controller
                 $ds_lang_btns = "true";
             
              
-                return view('card.' . $card_theme->theme . '.index', compact('businessfields', 'contactinfo', 'contactinfo_content', 'appoinment_hours', 'appoinment', 'services_content', 'services', 'testimonials_content', 'testimonials', 'social_content', 'sociallinks', 'customhtml', 'businesshours', 'business_hours', 'business', 'days', 'is_slug', 'plan', 'gallery', 'gallery_contents', 'pixelScript', 'qr_detail','products','products_content','ds_lang_btns', 'specificCompanyAndTheme'));
+                return view('card.' . $finalTheme . '.index', compact('businessfields', 'contactinfo', 'contactinfo_content', 'appoinment_hours', 'appoinment', 'services_content', 'services', 'testimonials_content', 'testimonials', 'social_content', 'sociallinks', 'customhtml', 'businesshours', 'business_hours', 'business', 'days', 'is_slug', 'plan', 'gallery', 'gallery_contents', 'pixelScript', 'qr_detail','products','products_content','ds_lang_btns', 'specificCompanyAndTheme'));
             }
             else{
                 return abort('403', 'The Link You Followed Has Disactive');
