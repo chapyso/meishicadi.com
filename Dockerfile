@@ -35,21 +35,28 @@ WORKDIR /var/www/html
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-# Create necessary directories
-RUN mkdir -p /var/log/supervisor /var/run /var/lib/nginx/logs /var/www/html/storage /var/www/html/bootstrap/cache
+# Create necessary directories and set initial permissions
+RUN mkdir -p /var/log/supervisor /var/run /var/lib/nginx/logs \
+    /var/www/html/storage/framework/cache/data \
+    /var/www/html/storage/framework/sessions \
+    /var/www/html/storage/framework/views \
+    /var/www/html/storage/logs \
+    /var/www/html/bootstrap/cache
 
 # Copy application source
 COPY . /var/www/html
 
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader --no-interaction
-
-# Fix file permissions for www-data
+# Fix file permissions for www-data before composer install
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache \
     && chown -R www-data:www-data /var/lib/nginx \
-    && chown -R www-data:www-data /var/log/nginx \
-    && php artisan storage:link
+    && chown -R www-data:www-data /var/log/nginx
+
+# Install dependencies as www-data (optional but safer) or ensure it can write
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+# Final tasks
+RUN php artisan storage:link
 
 # Expose port 80
 EXPOSE 80
