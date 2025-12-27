@@ -7,10 +7,10 @@ The Apple Wallet pass now includes dynamic user content and proper Apple Wallet 
 ```json
 {
   "formatVersion": 1,
-  "passTypeIdentifier": "pass.com.japytag.vcard",
+  "passTypeIdentifier": "pass.com.meishicadi.vcard",
   "serialNumber": "123_1703123456",
   "teamIdentifier": "YOUR_TEAM_ID",
-  "organizationName": "JAPY TAG",
+  "organizationName": "Meishicadi",
   "description": "Digital Business Card - John Doe",
   "logoText": "John Doe",
   "generic": {
@@ -147,7 +147,7 @@ The QR code contains:
 ### Environment Variables:
 ```env
 APPLE_TEAM_ID=your_team_id
-APPLE_PASS_TYPE_IDENTIFIER=pass.com.japytag.vcard
+APPLE_PASS_TYPE_IDENTIFIER=pass.com.meishicadi.vcard
 APPLE_NFC_PUBLIC_KEY=your_nfc_public_key
 APPLE_CERTIFICATE_PATH=/path/to/certificate.p12
 APPLE_CERTIFICATE_PASSWORD=your_certificate_password

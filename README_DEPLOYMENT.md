@@ -1,4 +1,4 @@
-# JAPY TAG - Deployment Guide
+# Meishicadi - Deployment Guide
 
 ## 🚀 SSH Deployment Instructions
 
@@ -158,26 +158,26 @@ server {
 Update your `.env` file with:
 
 ```env
-APP_NAME="JAPY TAG"
+APP_NAME="Meishicadi"
 APP_ENV=production
 APP_DEBUG=false
-APP_URL=https://your-domain.com
+APP_URL=https://meishicadi.com
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=japy_tag_production
+DB_DATABASE=meishicadi_production
 DB_USERNAME=your_db_username
 DB_PASSWORD=your_db_password
 
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.titan.email
 MAIL_PORT=465
-MAIL_USERNAME=no-reply@japytag.us
+MAIL_USERNAME=no-reply@meishicadi.com
 MAIL_PASSWORD=Abantu@256
 MAIL_ENCRYPTION=ssl
-MAIL_FROM_ADDRESS=no-reply@japytag.us
-MAIL_FROM_NAME="JAPY TAG"
+MAIL_FROM_ADDRESS=no-reply@meishicadi.com
+MAIL_FROM_NAME="Meishicadi"
 ```
 
 ### 🛠️ Troubleshooting
@@ -221,4 +221,4 @@ MAIL_FROM_NAME="JAPY TAG"
 
 ---
 
-**🎉 Your JAPY TAG application is now deployed and ready!** 
+**🎉 Your Meishicadi application is now deployed and ready!** 

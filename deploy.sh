@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# JAPY TAG Deployment Script
+# Meishicadi Deployment Script
 # Run this script on your SSH server after uploading the production archive
 
-echo "🚀 Starting JAPY TAG deployment..."
+echo "🚀 Starting Meishicadi deployment..."
 
 # Set variables
-PROJECT_NAME="japy-tag"
+PROJECT_NAME="meishicadi"
 WEB_DIR="/var/www/html"
-BACKUP_DIR="/var/backups/japy-tag"
+BACKUP_DIR="/var/backups/meishicadi"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 
 # Create backup directory if it doesn't exist
@@ -66,7 +66,7 @@ echo "🚀 Optimizing for production..."
 php artisan optimize
 
 echo "✅ Deployment completed successfully!"
-echo "🌐 Your JAPY TAG application is now live at: https://japytag.us"
+echo "🌐 Your Meishicadi application is now live at: https://meishicadi.com"
 echo "📧 Admin login: info@dodotech.tech"
 echo "🔑 Check the README_DEPLOYMENT.md for admin credentials"
 
