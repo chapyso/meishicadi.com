@@ -156,10 +156,10 @@
                                             <div class=" setting-card">
                                                 <div class="logo-content mt-4">
 
-                                                    <a href="{{ $logo . (isset($logo_img) && !empty($logo_img) ? $logo_img : 'logo-dark.png') }}"
+                                                    <a href="{{ $logo . '/' . (isset($logo_img) && !empty($logo_img) ? $logo_img : 'logo-dark.png') }}"
                                                         target="_blank">
                                                         <img id="blah" alt="your image"
-                                                            src="{{ $logo . (isset($logo_img) && !empty($logo_img) ? $logo_img : 'logo-dark.png').'?'.time()}}"
+                                                            src="{{ $logo . '/' . (isset($logo_img) && !empty($logo_img) ? $logo_img : 'logo-dark.png').'?'.time()}}"
                                                             width="150px" class="big-logo">
                                                     </a>
 
@@ -191,10 +191,10 @@
                                             <div class=" setting-card">
                                                 <div class="logo-content mt-4">
 
-                                                    <a href="{{ $logo . (isset($logo_light_img) && !empty($logo_light_img) ? $logo_light_img : 'company_logo_light.png') }}"
+                                                    <a href="{{ $logo . '/' . (isset($logo_light_img) && !empty($logo_light_img) ? $logo_light_img : 'company_logo_light.png') }}"
                                                         target="_blank">
                                                         <img id="blah1" alt="your image"
-                                                            src="{{ $logo . (isset($logo_light_img) && !empty($logo_light_img) ? $logo_light_img : 'company_logo_light.png').'?'.time()}}"
+                                                            src="{{ $logo . '/' . (isset($logo_light_img) && !empty($logo_light_img) ? $logo_light_img : 'company_logo_light.png').'?'.time()}}"
                                                             width="150px" class="big-logo img_setting">
                                                     </a>
                                                 </div>
@@ -225,10 +225,10 @@
                                         <div class="card-body min-250">
                                             <div class=" setting-card">
                                                 <div class="logo-content mt-4">
-                                                    <a href="{{ $logo . (isset($company_favicon) && !empty($company_favicon) ? $company_favicon : 'favicon.png') }}"
+                                                    <a href="{{ $logo . '/' . (isset($company_favicon) && !empty($company_favicon) ? $company_favicon : 'favicon.png') }}"
                                                         target="_blank">
                                                         <img id="blah2" alt="your image"
-                                                            src="{{ $logo . (isset($company_favicon) && !empty($company_favicon) ? $company_favicon : 'favicon.png').'?'.time() }}"
+                                                            src="{{ $logo . '/' . (isset($company_favicon) && !empty($company_favicon) ? $company_favicon : 'favicon.png').'?'.time() }}"
                                                             width="20%" class="img_setting">
                                                     </a>
                                                 </div>
