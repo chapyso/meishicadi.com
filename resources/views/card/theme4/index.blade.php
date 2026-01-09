@@ -804,7 +804,6 @@
                                                                             $social_links = url('https://wa.me/' . $social_val1);
                                                                         @endphp
                                                                     @endif
-                                @endif
                                                                 @else
                                                                     @php
                                                                         $social_links = url($social_val1);

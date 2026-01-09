@@ -27,7 +27,7 @@
     @if(Auth::user()->type == 'super admin')
         <link rel="icon" href="{{$logo.'/favicon.png'}}" type="image" sizes="16x16">
     @else
-        <link rel="icon" href="{{ $logo . (isset($company_favicon) && !empty($company_favicon) ? $company_favicon : 'favicon.png') }}" type="image" sizes="16x16">
+        <link rel="icon" href="{{ $logo . '/' . (isset($company_favicon) && !empty($company_favicon) ? $company_favicon : 'favicon.png') }}" type="image" sizes="16x16">
     @endif
 
     <!-- Preload critical assets -->
