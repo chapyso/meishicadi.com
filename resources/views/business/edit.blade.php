@@ -416,7 +416,7 @@
                                                         <div class="setting-block banner-setting">
                                                             <div class="position-relative overflow-hidden rounded">
                                                                 <!--https://meishicadi.com/storage/card_banner//banner16997281171179503667.png bb-->
-                                                                <img src="{{ isset($business->banner) && !empty($business->banner) ? $banner . '/' . $business->banner : ( ( $theme_ == 'theme19' ) ? 'https://meishicadi.com/storage/card_banner/banner16997281171179503667.png' : asset('custom/img/placeholder-image1.jpg') ) }}"
+                                                                <img src="{{ isset($business->banner) && !empty($business->banner) ? $banner . $business->banner : ( ( $theme_ == 'theme19' ) ? 'https://meishicadi.com/storage/card_banner/banner16997281171179503667.png' : asset('custom/img/placeholder-image1.jpg') ) }}"
                                                                     alt="images" class="w-100 imagepreview" id="banner" {{$business->banner}}>
                                                                 <div
                                                                     class="position-absolute top-50  end-0 start-0 text-center">
@@ -446,7 +446,7 @@
                                                         <p class="mb-2">{{__('Profile Photo:')}}</p>
                                                         <div class="setting-block banner-small-setting">
                                                             <div class="position-relative">
-                                                                <img src="{{ isset($business->logo) && !empty($business->logo) ? $logo.'/'.$business->logo : asset('custom/img/logo-placeholder-image-2.png') }}"
+                                                                <img src="{{ isset($business->logo) && !empty($business->logo) ? $logo . $business->logo : asset('custom/img/logo-placeholder-image-2.png') }}"
                                                                     alt="images" id="business_logo">
                                                                 <div
                                                                     class="position-absolute top-50  end-0 start-0 text-center">
