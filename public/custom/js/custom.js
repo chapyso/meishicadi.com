@@ -15,7 +15,7 @@ $(document).ready(function () {
     }
 });
 
-$(document).on("click", '.bs-pass-para',function () {
+$(document).on("click", '.bs-pass-para', function () {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
             confirmButton: 'btn btn-success',
@@ -28,7 +28,7 @@ $(document).on("click", '.bs-pass-para',function () {
         text: $(this).data('text'),
         icon: 'warning',
         showCancelButton: true,
-    confirmButtonText: 'Yes',
+        confirmButtonText: 'Yes',
         cancelButtonText: 'No',
         reverseButtons: false,
     }).then((result) => {
@@ -57,22 +57,22 @@ function show_toastr(title, message, type) {
         cls = 'danger';
     }
 
-    $.notify({icon: icon, title: " " + title, message: message, url: ""}, {
+    $.notify({ icon: icon, title: " " + title, message: message, url: "" }, {
         element: "body",
         type: cls,
         allow_dismiss: !0,
         placement: {
             from: 'top',
-            align: toster_pos
+            align: (typeof toster_pos !== "undefined" ? toster_pos : 'right')
         },
-        offset: {x: 15, y: 15},
+        offset: { x: 15, y: 15 },
         spacing: 10,
         z_index: 1080,
         delay: 2500,
         timer: 2000,
         url_target: "_blank",
         mouse_over: !1,
-        animate: {enter: o, exit: i},
+        animate: { enter: o, exit: i },
         template: '<div class="alert alert-{0} alert-icon alert-group alert-notify" data-notify="container" role="alert"><div class="alert-group-prepend alert-content"><span class="alert-group-icon"><i data-notify="icon"></i></span></div><div class="alert-content"><strong data-notify="title">{1}</strong><div data-notify="message">{2}</div></div><button type="button" class="close" data-notify="dismiss" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
     });
 }
@@ -134,7 +134,7 @@ $(document).on("submit", "#commonModalOver form", function (e) {
         error: function (data) {
             data = data.responseJSON;
             show_toastr('Error', data.error, 'error')
-            
+
         }
     });
 });
@@ -491,7 +491,7 @@ function commonLoader() {
     // }
     // });
     if ($("#selector").length > 0)
-   $("#selector").select2();
+        $("#selector").select2();
 
     if ($(".summernote-simple").length) {
         $('.summernote-simple').summernote({
@@ -694,25 +694,25 @@ $('[data-confirm]').each(function () {
     })
 });
 
-function selectFile(elementid){
-  $(`.${elementid}`).trigger('click');
-  $(`.${elementid}`).change(function() {
-      var url = this.value;
-      var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
-      if (this.files && this.files[0]&& (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")) {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-              $(`#${elementid}`).attr('src', e.target.result);
-              $(`#section_${elementid}`).attr('src', e.target.result);
-              $(`#${elementid}_preview`).attr('src', e.target.result);
-          }
-          reader.readAsDataURL(this.files[0]);
-      }else{
-          $(`#${elementid}`).attr('src', '/assets/no_preview.png');
+function selectFile(elementid) {
+    $(`.${elementid}`).trigger('click');
+    $(`.${elementid}`).change(function () {
+        var url = this.value;
+        var ext = url.substring(url.lastIndexOf('.') + 1).toLowerCase();
+        if (this.files && this.files[0] && (ext == "gif" || ext == "png" || ext == "jpeg" || ext == "jpg")) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $(`#${elementid}`).attr('src', e.target.result);
+                $(`#section_${elementid}`).attr('src', e.target.result);
+                $(`#${elementid}_preview`).attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        } else {
+            $(`#${elementid}`).attr('src', '/assets/no_preview.png');
 
-          $(`#section_${elementid}`).attr('src', '/assets/no_preview.png');
-      }
-  });
+            $(`#section_${elementid}`).attr('src', '/assets/no_preview.png');
+        }
+    });
 
 }
 
@@ -748,3 +748,19 @@ $(document).on('click', 'a[data-ajax-popup-over="true"], button[data-ajax-popup-
 
 
 
+
+$(document).on('click', '.cp_link', function (e) {
+    e.preventDefault();
+    var value = $(this).attr('data-link');
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(value).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    // Use data attributes if available, otherwise default
+    var msg = 'Link Copy on Clipboard';
+    var title = 'Success';
+
+    show_toastr(title, msg, 'success');
+});

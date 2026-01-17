@@ -4031,17 +4031,7 @@
     
     }
 </script>
-<script type="text/javascript">
-    $('.cp_link').on('click', function() {
-        var value = $(this).attr('data-link');
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val(value).select();
-        document.execCommand("copy");
-        $temp.remove();
-        toastrs('{{ __('Success') }}', '{{ __('Link Copy on Clipboard') }}', 'success');
-    });
-</script>
+
 
 <script type="text/javascript">
     function enablecookie() {

@@ -143,7 +143,7 @@
                                             @can('edit appointment')
                                                 <div class="action-btn bg-success  ms-2">
                                                     <a href="#"
-                                                        class="mx-3 btn btn-sm d-inline-flex align-items-center cp_link"
+                                                        class="mx-3 btn btn-sm d-inline-flex align-items-center"
                                                         data-toggle="modal" data-target="#commonModal" data-ajax-popup="true"
                                                         data-size="lg" data-url="{{ route('appointment.add-note', $val->id) }}"
                                                         data-title="{{ __('Add Note & Change Status') }}"

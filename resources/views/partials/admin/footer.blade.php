@@ -59,47 +59,50 @@ setTimeout(function() {
 
 <!-- Custom Scripts -->
 <script src="{{ asset('custom/js/emojionearea.min.js')}}" defer></script>
-<script src="{{ asset('public/custom/js/socialSharing.js') }}" defer></script>
+<script src="{{ asset('custom/js/socialSharing.js') }}" defer></script>
 
 <script>
-  if ($("#pc-dt-simple").length > 0) {
-    const dataTable = new simpleDatatables.DataTable("#pc-dt-simple");
-  }
+  document.addEventListener('DOMContentLoaded', function() {
+    if ($("#pc-dt-simple").length > 0) {
+      const dataTable = new simpleDatatables.DataTable("#pc-dt-simple");
+    }
+  });
 </script>
 
 {{-- MODAL --}}
  @stack('custom-scripts')
 
 <script>
-  feather.replace();
-  var pctoggle = document.querySelector("#pct-toggler");
-  if (pctoggle) {
-    pctoggle.addEventListener("click", function () {
-      if (
-        !document.querySelector(".pct-customizer").classList.contains("active")
-      ) {
-        document.querySelector(".pct-customizer").classList.add("active");
-      } else {
-        document.querySelector(".pct-customizer").classList.remove("active");
-      }
-    });
-  }
+  document.addEventListener('DOMContentLoaded', function() {
+    feather.replace();
+    var pctoggle = document.querySelector("#pct-toggler");
+    if (pctoggle) {
+      pctoggle.addEventListener("click", function () {
+        if (
+          !document.querySelector(".pct-customizer").classList.contains("active")
+        ) {
+          document.querySelector(".pct-customizer").classList.add("active");
+        } else {
+          document.querySelector(".pct-customizer").classList.remove("active");
+        }
+      });
+    }
 
-  var themescolors = document.querySelectorAll(".themes-color > a");
-  for (var h = 0; h < themescolors.length; h++) {
-    var c = themescolors[h];
+    var themescolors = document.querySelectorAll(".themes-color > a");
+    for (var h = 0; h < themescolors.length; h++) {
+      var c = themescolors[h];
 
-    c.addEventListener("click", function (event) {
-      var targetElement = event.target;
-      if (targetElement.tagName == "SPAN") {
-        targetElement = targetElement.parentNode;
-      }
-      var temp = targetElement.getAttribute("data-value");
-      removeClassByPrefix(document.querySelector("body"), "theme-");
-      document.querySelector("body").classList.add(temp);
-    });
-  }
-
+      c.addEventListener("click", function (event) {
+        var targetElement = event.target;
+        if (targetElement.tagName == "SPAN") {
+          targetElement = targetElement.parentNode;
+        }
+        var temp = targetElement.getAttribute("data-value");
+        removeClassByPrefix(document.querySelector("body"), "theme-");
+        document.querySelector("body").classList.add(temp);
+      });
+    }
+  });
 
   function removeClassByPrefix(node, prefix) {
     for (let i = 0; i < node.classList.length; i++) {

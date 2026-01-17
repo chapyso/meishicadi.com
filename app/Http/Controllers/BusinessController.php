@@ -1405,44 +1405,34 @@ class BusinessController extends Controller
     public function destroy($id)
     {
         if (\Auth::user()->can('delete business')) {
-            $count = Business::where('created_by', \Auth::user()->creatorId())->count();
-            if ($count == 0) {
-                return redirect()->route('business.index')->with('error', __('This card number is not yours.'));
+            $business = Business::where('id', $id)->where('created_by', \Auth::user()->creatorId())->first();
+            if (!$business) {
+                return redirect()->back()->with('error', __('Business not found or access denied.'));
             }
-            if ($count > 1) {
-                $user = \Auth::user();
 
-                $business = Business::where('id', $id)->first();
-                $businessqr = Businessqr::where('business_id', $id)->get();
+            $user = \Auth::user();
 
+            $bannername = $business['banner'];
+            $logoname = $business['logo'];
+            $metaimage = $business['banner'];
 
-                $bannername = $business['banner'];
-                $logoname = $business['logo'];
-                $metaimage = $business['banner'];
+            $image_path1 = 'card_banner/' . $bannername;
+            $image_path2 = 'card_logo/' . $logoname;
+            $image_path3 = 'meta_images/' . $metaimage;
 
+            Utility::changeStorageLimit(\Auth::user()->creatorId(), $image_path1);
+            Utility::changeStorageLimit(\Auth::user()->creatorId(), $image_path2);
+            Utility::changeStorageLimit(\Auth::user()->creatorId(), $image_path3);
 
-                $image_path1 = 'card_banner/' . $bannername;
-                $image_path2 = 'card_logo/' . $logoname;
-                $image_path3 = 'meta_images/' . $metaimage;
+            $business->delete();
+            Appointment_deatail::where('business_id', $id)->delete();
+            Contacts::where('business_id', $id)->delete();
 
+            $currentBusiness = Business::where('created_by', \Auth::user()->creatorId())->first();
 
-                $result = Utility::changeStorageLimit(\Auth::user()->creatorId(), $image_path1);
-                $result = Utility::changeStorageLimit(\Auth::user()->creatorId(), $image_path2);
-                $result = Utility::changeStorageLimit(\Auth::user()->creatorId(), $image_path3);
-                //$result = Utility::changeStorageLimit(\Auth::user()->creatorId(), $image_path5);
-
-                $business = Business::where('id', $id)->delete();
-                Appointment_deatail::where('business_id', $id)->delete();
-                Contacts::where('business_id', $id)->delete();
-
-                $currentBusiness = Business::where('created_by', \Auth::user()->creatorId())->first();
-
-                $user->current_business = $currentBusiness->id;
-                $user->save();
-                return redirect()->back()->with('success', __('Business Information Deleted Successfully'));
-            } else {
-                return redirect()->back()->with('error', __('You have only one business'));
-            }
+            $user->current_business = $currentBusiness ? $currentBusiness->id : 0;
+            $user->save();
+            return redirect()->back()->with('success', __('Business Information Deleted Successfully'));
 
         } else {
             return redirect()->back()->with('error', __('Permission denied.'));
